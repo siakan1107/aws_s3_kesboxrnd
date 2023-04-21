@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "s3_bucket_kb" {
 
 resource "aws_s3_bucket_policy" "allow_access_from_kesboxcoe" {
   bucket = aws_s3_bucket.s3_bucket_kb.id
-  policy = data.aws_iam_policy_document.allow_access_kesboxcoe.json
+  policy = data.aws_iam_policy_document.allow_access_from_kesboxcoe.json
 }
 
 data "aws_iam_policy_document" "allow_access_from_kesboxcoe" {
