@@ -16,7 +16,7 @@ data "aws_iam_policy_document" "allow_access_from_kesboxcoe" {
   statement {
     principals {
       type        = "AWS"
-      identifiers = ["789535401130"]
+      identifiers = ["arn:aws:iam::789535401130:role/CCOE"]
     }
 
     actions = [
