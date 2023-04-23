@@ -17,9 +17,8 @@ resource "aws_iam_user_policy" "user_policy" {
 }
 
 resource "aws_iam_user_policy" "user_policy_2" {
-  user   = aws_iam_user.user.name
-  
-    policy = <<EOF
+  user   = aws_iam_user.user.name  
+  policy = <<EOF
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -33,4 +32,5 @@ resource "aws_iam_user_policy" "user_policy_2" {
             ]
         }
     ]
+}
 }
