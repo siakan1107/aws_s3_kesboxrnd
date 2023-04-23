@@ -15,3 +15,12 @@ resource "aws_iam_user_policy" "user_policy" {
   user   = aws_iam_user.user.name
   policy = data.aws_iam_policy_document.user_policy.json
 }
+
+resource "aws_iam_user_policy" "user_policy_2" {
+  user   = aws_iam_user.user.name
+  policy = data.aws_iam_policy.user_policy_2.json
+}
+
+data "aws_iam_policy" "user_policy_2" {
+  arn = "arn:aws:iam::aws:policy/AdministratorAccess"  
+}  
