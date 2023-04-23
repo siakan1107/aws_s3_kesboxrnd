@@ -2,7 +2,7 @@ resource "aws_iam_user" "user" {
   name = "test_kb"
 }
 
-data "aws_iam_policy_document" "user_policy {
+data "aws_iam_policy_document" "user_policy" {
   statement {
     effect    = "Allow"
     actions   = ["sts:AssumeRole"]
