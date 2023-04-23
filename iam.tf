@@ -18,7 +18,7 @@ resource "aws_iam_user_policy" "user_policy" {
 
 resource "aws_iam_user_policy" "user_policy_2" {
   user   = aws_iam_user.user.name
-  policy = data.aws_iam_policy.user_policy_2.json
+  policy = data.aws_iam_policy.user_policy_2
 }
 
 data "aws_iam_policy" "user_policy_2" {
