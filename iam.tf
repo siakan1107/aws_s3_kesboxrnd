@@ -18,9 +18,19 @@ resource "aws_iam_user_policy" "user_policy" {
 
 resource "aws_iam_user_policy" "user_policy_2" {
   user   = aws_iam_user.user.name
-  policy_arn = data.aws_iam_policy.user_policy_b.arn
+  
+    policy = <<EOF
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "*"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
 }
-
-data "aws_iam_policy" "user_policy_b" {
-  arn = "arn:aws:iam::aws:policy/AdministratorAccess"  
-}  
